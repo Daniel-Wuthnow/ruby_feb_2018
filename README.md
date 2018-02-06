@@ -25,6 +25,7 @@ NOTE: If you don't get in at least one pull request daily, then *_ya ain't serio
 
 ## Videos
 Intro to Ruby - https://youtu.be/faCI0s62vAg <br>
+Push to class repo - https://youtu.be/eD6qnTbpJrw <br>
 
 ## Demos
 
