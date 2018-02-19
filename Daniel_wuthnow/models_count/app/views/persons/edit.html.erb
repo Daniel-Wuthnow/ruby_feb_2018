@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<p>What would you like your new name to be:</p>
+<form accept="update" method="post">
+	<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+	<input type="text" name="name">
+	<button>New Name</button>
+</form>
+<p>Old name:<%= @User.name %></p>
+
+</body>
+</html>
