@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<form action="/run" method="post">
+	<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+	Name:<input type="text" name="name"><br>
+	Dojo Loc:<select name="loc">
+		<option value="dallas">dallas</option>
+		<option value="tulsa">tulsa</option>
+		<option value="seattle">seattle</option>
+	</select>
+	<br>
+	Laungue:<select name="lau">
+		<option value="python">python</option>
+		<option value="ruby">ruby</option>
+		<option value="mean">mean</option>
+	</select>
+	<br>
+	Comments:<input type="text" name="comment">
+	<br>
+	<button type="submit">Submit</button>
+</form>
+</body>
+</html>
