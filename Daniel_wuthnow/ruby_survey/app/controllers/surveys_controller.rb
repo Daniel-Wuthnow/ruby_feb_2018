@@ -1,9 +1,13 @@
 class SurveysController < ApplicationController
 	def index
-		session[:count] = 0
+		
 	end
 	def run
-		session[:count] += 1
+		if session[:count] > 0
+			session[:count] += 1
+		else
+			session[:count] = 0
+		end
 		session[:name] = params[:name]
 		session[:loc] = params[:loc]
 		session[:lau] = params[:lau]
