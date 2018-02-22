@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
   get "dojos" => 'dojo_controller#index'
   get "dojos/new" => 'dojo_controller#new'
-  get "dojos/create" => 'dojo_controller#create'
+  post "dojos/create" => 'dojo_controller#create'
+  get "dojos/:id" => 'dojo_controller#show'
+  get "dojos/:id/edit" => 'dojo_controller#edit'
+  post "dojos/:id" => 'dojo_controller#update'
+  delete "dojos/:id" => 'dojo_controller#destroy'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
