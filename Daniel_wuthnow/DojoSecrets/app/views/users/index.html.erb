@@ -1,0 +1,9 @@
+<h3>Welcome <a href="/users/<%= current_user.id %>"><%= current_user.name %></a></h3>
+
+<h4>User:</h4>
+<% @users.each do |user| %>
+	<p><%= user.name %></p>
+<% end %>
+
+
+<a href="/sessions/<%= current_user.id %>" data-method="delete">logout</a>

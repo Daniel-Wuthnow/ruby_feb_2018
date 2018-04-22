@@ -1,0 +1,49 @@
+<div class="container" style="margin-top:20px;">
+
+<h3>Register</h3>
+
+	<form action="/users" method="post">
+		<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+		<div class="row">
+			<div class="col-sm-9">
+				<div class="form-group row">
+					<label class="col-sm-3" for="name">Name</label>
+					<input type="text" name="user[name]" class="form-control col-sm-9" id="name">
+				</div>
+				<div class="form-group row">
+					<label class="col-sm-3" for="email">Email</label>
+					<input type="email" name="user[email]" class="form-control col-sm-9" id="email">
+				</div>
+				<div class="form-group row">
+					<label class="col-sm-3" for="password">Password</label>
+					<input type="password" name="user[password]" class="form-control col-sm-9" id="password">
+				</div>
+				<div class="form-group row">
+					<label class="col-sm-3" for="password_confirmation">Password Confirmation</label>
+					<input type="password" name="user[password_confirmation]" class="form-control col-sm-9" id="password_confirmation">
+				</div>
+			</div>
+			<div class="col-sm-3 text-center">
+				<div>
+					<% if flash[:error] %>
+						<h6 style="color: red">Errors:</h6>
+						<% flash[:error].each do |error| %>
+							<span style="color: red"><%= error %></span>
+							<br>
+						<% end %>
+					<% end %>
+				</div>
+			</div>
+		</div>
+	<div class="row">
+		<div class="col-sm-9 offset-sm-3" style="position: fixed;">
+			<button type="submit" class="btn btn-primary">Join</button>
+			<a href="/sessions/new">
+				<button class="btn btn-primary">Log in</button>
+			</a>
+		</div>
+	</div>
+	</form>
+
+
+</div>
